@@ -1,0 +1,42 @@
+<!-- Activity 4: Modifying Attributes and Classes -->
+<!-- • Task 7: Select an HTML element and change one of its attributes (e.g., src of an img tag). -->
+<!-- • Task 8: Add and remove a CSS class to/from an HTML element. -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Attribute MOdification</title>
+        <style>
+            .highlight {
+                background-color: yellow;
+                color: black;
+                font-size: 30px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body style="background-color: black; color: bisque">
+        <img
+            src="https://cdn.britannica.com/70/234870-050-D4D024BB/Orange-colored-cat-yawns-displaying-teeth.jpg"
+            alt="Orange Cat"
+            height="300px"
+            width="600px"
+        />
+
+        <h1>Modify Attributes and Classes</h1>
+        <div id="myDiv" class="highlight">This is a div element.</div>
+    </body>
+    <script>
+        function changeImgWidth(width) {
+            document.querySelector("img").setAttribute("width", `${width}px`);
+        }
+
+        changeImgWidth(450);
+
+        document.querySelector("#myDiv").classList.remove("highlight");
+
+        document.getElementById("myDiv").classList.add("highlight");
+    </script>
+</html>

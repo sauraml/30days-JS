@@ -1,0 +1,38 @@
+<!-- Activity 1: Selecting and Manipulating Elements -->
+<!-- • Task 1: Select an HTML element by its ID and change its text content. -->
+<!-- • Task 2: Select an HTML element by its class and change its background color. -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Text Manipulation</title>
+    </head>
+    <body>
+        <h1 id="main-heading">Hello JS</h1>
+        <p class="para">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni,
+            esse molestiae? Saepe sint omnis numquam iure maxime autem tempore
+            cupiditate harum laudantium, fugit commodi eveniet delectus impedit
+            asperiores mollitia a. Lorem, ipsum dolor sit amet consectetur
+            adipisicing elit. Minima, nobis. Minima facere aliquid mollitia enim
+            et impedit qui explicabo odit. Ad optio omnis explicabo tenetur,
+            corporis voluptatibus eaque laborum sunt.
+        </p>
+    </body>
+    <script>
+        let text = "Welcome to 30 Days of JavaScript";
+        function changeTextContent(text) {
+            document.getElementById("main-heading").textContent = text;
+        }
+
+        let color = "orange";
+        function changeBackgroundColor(color) {
+            document.querySelector(".para").style.backgroundColor = color;
+        }
+
+        changeTextContent(text);
+        changeBackgroundColor(color);
+    </script>
+</html>

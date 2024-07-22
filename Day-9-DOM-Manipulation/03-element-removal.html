@@ -1,0 +1,54 @@
+<!-- Activity 3: Removing Elements  -->
+<!-- • Task 5: Select an HTML element and remove it from the DOM.  -->
+<!-- • Task 6: Remove the last child of a specific HTML element. -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Element Removal from DOM</title>
+    </head>
+    <body style="background-color: black; color: antiquewhite">
+        <p class="para">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+            ducimus maxime perferendis libero nihil et veritatis ipsam excepturi
+            commodi mollitia fugit tempora odio exercitationem at saepe iste
+            sed, assumenda optio? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Vero, id voluptatibus neque porro quam labore
+            natus modi quibusdam expedita temporibus repellendus, deleniti
+            numquam hic exercitationem perspiciatis totam at dignissimos in.
+        </p>
+        <ul>
+            <li>Mango</li>
+            <li>Apple</li>
+            <li>Grapes</li>
+            <li>Banana</li>
+            <li>Guvava</li>
+            <li>Peach</li>
+        </ul>
+    </body>
+    <script>
+        function removeElement(elementClass) {
+            const element = document.querySelector(elementClass);
+            if (element) {
+                element.remove();
+            }
+        }
+
+        removeElement(".para");
+
+        function removeLastChild(element) {
+            const parent = document.querySelector(element);
+
+            if (parent) {
+                const children = parent.children;
+                if (children.length > 0) {
+                    parent.removeChild(children[children.length - 1]);
+                }
+            }
+        }
+
+        removeLastChild("ul");
+    </script>
+</html>

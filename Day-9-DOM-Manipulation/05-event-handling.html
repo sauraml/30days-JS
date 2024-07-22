@@ -1,0 +1,59 @@
+<!-- Activity 5: Event Handling -->
+<!-- • Task 9: Add a click event listener to a button that changes the text content of a paragraph. -->
+<!-- • Task 10: Add a mouseover event listener to an element that changes its border color. -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Event Handling</title>
+        <style>
+            .container {
+                font-size: 20px;
+                width: 600px;
+                margin: 80px auto;
+                padding: 25px;
+                border: solid 10px;
+                border-color: aquamarine;
+            }
+        </style>
+    </head>
+    <body style="background-color: black; color: blanchedalmond">
+        <div class="container">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ea
+                quae, reprehenderit non modi facere ad nemo? Voluptate obcaecati
+                quos aliquam vitae libero. Magnam iste ducimus ratione, ipsa
+                eligendi exercitationem! Lorem, ipsum dolor sit amet consectetur
+                adipisicing elit. Qui eum asperiores facere quas, sint
+                aspernatur, et at odio vel dolorum rem, quis adipisci pariatur
+                veniam. Dolorem animi soluta ea voluptate.
+            </p>
+            <button>Change Content</button>
+        </div>
+    </body>
+    <script>
+        let content =
+            "The marabou stork (Leptoptilos crumenifer) is a wading bird in the stork family, Ciconiidae, native to sub-Saharan Africa. It is a large bird, with individuals reaching a height of 152 centimetres (4.99 feet) and a weight of 9 kilograms (20 lb), and has the largest wingspan of any land bird, with an average of 2.6 metres (8.5 ft) and some recorded examples of up to 3.2 metres (10 ft). The marabou stork breeds in Africa south of the Sahara. In East Africa, the birds interact with humans and breed in urban areas. In southern African countries, the birds breed mainly in less populated areas. This marabou stork in flight was photographed in the town of Batu, by Lake Ziway, Ethiopia.";
+
+        const button = document.querySelector("button");
+
+        button.addEventListener(
+            "click",
+            () => (document.querySelector("p").textContent = content)
+        );
+
+        const container = document.querySelector(".container");
+
+        container.addEventListener(
+            "mouseover",
+            () => (container.style.borderColor = "green")
+        );
+
+        container.addEventListener(
+            "mouseout",
+            () => (container.style.borderColor = "aquamarine")
+        );
+    </script>
+</html>

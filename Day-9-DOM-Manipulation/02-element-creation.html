@@ -1,0 +1,40 @@
+<!-- Activity 2: Creating and Appending Elements -->
+<!-- • Task 3: Create a new div element with some text content and append it to the body. -->
+<!-- • Task 4: Create a new li element and add it to an existing ul list. -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Element Creation</title>
+    </head>
+    <body style="background-color: black; color: antiquewhite">
+        <h1>Element Creation</h1>
+        <ul>
+            <li>Apple</li>
+            <li>Orange</li>
+            <li>Banana</li>
+        </ul>
+    </body>
+    <script>
+        let text =
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quos dicta sapiente nisi, ab quo atque earum necessitatibus deserunt nesciunt recusandae incidunt soluta quam eligendi rerum distinctio? Est, alias inventore? Lorem ipsum dolor sit amet consectetur adipisicing elit. In reprehenderit hic obcaecati quia consectetur impedit recusandae, modi excepturi. Sapiente dolor sunt quas? Ea modi harum iure, quae placeat praesentium culpa?";
+
+        function addNewDiv(text) {
+            let newDiv = document.createElement("div");
+            newDiv.textContent = text;
+            document.body.appendChild(newDiv);
+        }
+
+        addNewDiv(text);
+
+        function addNewListElement(elementText) {
+            let newLiElement = document.createElement("li");
+            newLiElement.textContent = elementText;
+            document.querySelector("ul").appendChild(newLiElement);
+        }
+
+        addNewListElement("Mango");
+    </script>
+</html>
