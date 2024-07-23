@@ -1,0 +1,28 @@
+<!-- Activity 3: Keyboard Events
+. Task 5: Add a keydown event listener to an input field that logs the key pressed to the console.
+. Task 6: Add a keyup event listener to an input field that displays the current value in a paragraph. -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Keyboard Event Handling</title>
+    </head>
+    <body>
+        <input type="text" placeholder="example@email" />
+        <p></p>
+    </body>
+    <script>
+        const input = document.querySelector("input");
+        const paragraph = document.querySelector("p");
+
+        input.addEventListener("keydown", (e) => {
+            console.log(e.key);
+        });
+
+        input.addEventListener("keyup", () => {
+            paragraph.textContent = input.value;
+        });
+    </script>
+</html>

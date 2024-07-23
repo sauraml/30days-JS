@@ -1,0 +1,42 @@
+<!-- Activity 1: Basic Event Handling
+• Task 1: Add a click event listener to a button that changes the text content of a paragraph.
+• Task 2: Add a double-click event listener to an image that toggles its visibility. -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Click Event Handling</title>
+        <style></style>
+    </head>
+    <body>
+        <div style="padding: 40px">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+                suscipit blanditiis nobis eveniet, ea, expedita obcaecati
+                aperiam neque delectus assumenda perferendis. Nesciunt maxime
+                autem reprehenderit tenetur voluptatibus nemo iste provident?
+            </p>
+            <button>Click Me</button>
+        </div>
+        <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Elephas_maximus_%28Bandipur%29.jpg/330px-Elephas_maximus_%28Bandipur%29.jpg"
+        />
+    </body>
+    <script>
+        const button = document.querySelector("button");
+
+        button.addEventListener("click", function () {
+            document.querySelector("p").textContent =
+                "The Indian elephant (Elephas maximus indicus) is one of three extant recognized subspecies of the Asian elephant, native to mainland Asia. The species is smaller than the African elephant species with a convex back and the highest body point on its head. The species exhibits significant sexual dimorphism with a male reaching an average shoulder height of about 3.2 m (10 ft) and weighing up to 5,400 kg (11,900 lb) whereas a female reaches an average shoulder height of about 2.54 m (8.3 ft) and weighs up to 4,160 kg (9,170 lb). It has a broader skull with a concave forehead, two large laterally folded ears and a large trunk. It has grey colored smooth skin with four large legs and a long tail.";
+        });
+
+        const image = document.querySelector("img");
+
+        image.addEventListener("dblclick", function () {
+            image.style.display =
+                image.style.display === "none" ? "block" : "none";
+        });
+    </script>
+</html>
